@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Gallery</h1>
+        <% if (images.length > 0) { %>
+            <div>
+                <% images.forEach(image => { %>
+                    <div class="gallery-item">
+                        <h2><%= image.title %></h2>
+                        <img src="<%= image.imagePath %>" alt="<%= image.title %>">
+                        <p><%= image.description %></p>
+                        <p><small>Uploaded by: <%= image.User.username %></small></p>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <p class="text-center">No images uploaded yet.</p>
+        <% } %>
+        <div class="nav-links">
+            <a href="/my-pictures" class="btn btn-primary">My Pictures</a>
+            <a href="/upload" class="btn btn-success">Upload Image</a>
+            <a href="/gallery" class="btn btn-info">View All Images</a>
+            <a href="/logout" class="btn btn-secondary">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
