@@ -34,28 +34,29 @@ npm install
 ```
 
 ## Configure the Database 
-```
+
 1. Create a MySQL database named gallery_db.
 2. Update the database configuration in config/db.js with your MySQL credentials.
-```
+
 
 ## Running the Application
-```
+
 1. Start the server:
+```
 bash 
 npx nodemon app.js
-
+```
 2. Open your browser and navigate to http://localhost:3000.
-``` 
+ 
 
 ## Usage
-```
+
 1. Register: Create a new user account.
 2. Login: Log in to your account.
 3. Upload Images: Use the upload form to add new images.
 4. View Gallery: See images uploaded by all users.
 5. My Pictures: View images you have uploaded.
-```
+
 
 ## File Storage with Multer
 This application uses Multer to handle file uploads. Multer stores uploaded files in the public/uploads directory.
